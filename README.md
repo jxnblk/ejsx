@@ -64,6 +64,41 @@ To pass props to the Root component, create a JSON file and pass the name of tha
 ejsx components --props data.json > index.html
 ```
 
+## Loops
+
+Looping over arrays is done using the array `map()` method.
+Each child in an array must also have a `key` prop to be properly tracked.
+
+```jsx
+<ul>
+  {props.items.map((item, i) => (
+    <li key={i}>
+      {item}
+    </li>
+  ))}
+<ul>
+```
+
+## Conditionals
+
+If statements will not work in JSX, but [ternary operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) can be used instead.
+
+```jsx
+<div>
+  {props.foo % 2 ? <span>Odd</span> : <span>Even</span>}
+</div>
+```
+
+You can also skip rendering is a value is falsy.
+
+```jsx
+<div>
+  {true && <div>Visible</div>}
+  {false && <div>Hidden</div>}
+  {props.foo && <div>Hidden when props.foo is falsy</div>}
+</div>
+```
+
 See the [`docs`](docs) folder for a complete example.
 
 ## Motivations
@@ -75,6 +110,12 @@ without the need to use JavaScript.
 
 This might be good as a soft introduction to some of the concepts in React,
 especially related to code reuse, component encapsulation, and styling in React.
+
+
+## About JSX
+
+- https://facebook.github.io/react/docs/jsx-in-depth.html
+- https://facebook.github.io/jsx/
 
 MIT License
 

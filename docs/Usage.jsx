@@ -23,4 +23,27 @@
   <Pre>{`<html>
   <Header title='Hello' />
 </html>`}</Pre>
+  <h3>Passing in Data Props</h3>
+  <p>
+    To pass props to the Root component, create a JSON file and use the --props flag.
+  </p>
+  <Pre children={`{
+  "title": "Hello"
+}`} />
+  <Pre>ejsx components --props data.json > index.html</Pre>
+  <h3>Loops</h3>
+  <Pre children={`<ul>
+  {props.items.map((item, i) => (
+    <li key={i}>
+      {item}
+    </li>
+  ))}
+</ul>`} />
+  <h3>Conditionals</h3>
+  <Pre children={`<div>
+  {props.foo % 2 ? <span>Odd</span> : <span>Even</span>}
+</div>`} />
+  <Pre children={`<div>
+  {props.foo && <div>Hidden when props.foo is falsy</div>}
+</div>`} />
 </section>

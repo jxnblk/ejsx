@@ -11,6 +11,11 @@ body {
 }
 
 a { color: var(--blue) }
+code {
+  font-family: Menlo, monospace;
+  font-size: 87.5%;
+}
+
 
 .white { color: #fff }
 .black { color: var(--black) }
@@ -58,4 +63,16 @@ a { color: var(--blue) }
   &lt;h1&gt;{props.title}&lt;/h1&gt;
 &lt;/header&gt;</pre><pre class="h5 p2" style="font-family:Menlo, monospace;background-color:#f6f6f6;">&lt;html&gt;
   &lt;Header title=&#x27;Hello&#x27; /&gt;
-&lt;/html&gt;</pre></section></div></div><footer class="pl3 pr3 pt4 pb4"><p class="h5 bold"><a class="mr2" href="https://github.com/jxnblk/ejsx">GitHub</a><a class="mr2" href="https://npmjs.com/package/ejsx">npm</a><a href="http://jxnblk.com">Made by Jxnblk</a></p></footer><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-4603832-6", "auto");ga("send", "pageview");</script></html>
+&lt;/html&gt;</pre><h3>Passing in Data Props</h3><p>To pass props to the Root component, create a JSON file and use the --props flag.</p><pre class="h5 p2" style="font-family:Menlo, monospace;background-color:#f6f6f6;">{
+  &quot;title&quot;: &quot;Hello&quot;
+}</pre><pre class="h5 p2" style="font-family:Menlo, monospace;background-color:#f6f6f6;">ejsx components --props data.json &gt; index.html</pre><h3>Loops</h3><pre class="h5 p2" style="font-family:Menlo, monospace;background-color:#f6f6f6;">&lt;ul&gt;
+  {props.items.map((item, i) =&gt; (
+    &lt;li key={i}&gt;
+      {item}
+    &lt;/li&gt;
+  ))}
+&lt;/ul&gt;</pre><h3>Conditionals</h3><pre class="h5 p2" style="font-family:Menlo, monospace;background-color:#f6f6f6;">&lt;div&gt;
+  {props.foo % 2 ? &lt;span&gt;Odd&lt;/span&gt; : &lt;span&gt;Even&lt;/span&gt;}
+&lt;/div&gt;</pre><pre class="h5 p2" style="font-family:Menlo, monospace;background-color:#f6f6f6;">&lt;div&gt;
+  {props.foo &amp;&amp; &lt;div&gt;Hidden when props.foo is falsy&lt;/div&gt;}
+&lt;/div&gt;</pre></section></div></div><footer class="pl3 pr3 pt4 pb4"><p class="h5 bold"><a class="mr2" href="https://github.com/jxnblk/ejsx">GitHub</a><a class="mr2" href="https://npmjs.com/package/ejsx">npm</a><a class="mr2" href="http://jxnblk.com">Made by Jxnblk</a></p></footer><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-4603832-6", "auto");ga("send", "pageview");</script></html>

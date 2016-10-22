@@ -1,4 +1,18 @@
 {
   "title": "<Ejsx />",
-  "description": "Pure JSX templates for rendering static HTML"
+  "description": "Pure JSX templates for rendering static HTML",
+  "links": [
+    {
+      "href": "https://github.com/jxnblk/ejsx",
+      "text": "GitHub"
+    },
+    {
+      "href": "https://npmjs.com/package/ejsx",
+      "text": "npm"
+    },
+    {
+      "href": "http://jxnblk.com",
+      "text": "Made by Jxnblk"
+    }
+  ]
 }

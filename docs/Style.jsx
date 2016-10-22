@@ -13,6 +13,11 @@ body {
 }
 
 a { color: var(--blue) }
+code {
+  font-family: Menlo, monospace;
+  font-size: 87.5%;
+}
+
 
 .white { color: #fff }
 .black { color: var(--black) }

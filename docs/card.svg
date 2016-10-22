@@ -1,0 +1,20 @@
+<svg xmlns='http://www.w3.org/2000/svg'
+viewBox='0 0 128 128' width='256' height='256'>
+  <rect width='128' height='128' fill='#0d1b26' />
+  <text
+    x='64'
+    y='72'
+    fill='#fff'
+    text-anchor='middle'
+    style='
+      font-family:
+        -apple-system, BlinkMacSystemFont,
+        "Helvetica Neue", Helvetica,
+        sans-serif;
+      font-weight:bold;
+      font-size:28px;
+      '
+  >
+    &lt;Ejsx /&gt;
+  </text>
+</svg>

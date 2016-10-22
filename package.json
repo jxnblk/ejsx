@@ -1,0 +1,29 @@
+{
+  "name": "ejsx",
+  "version": "1.0.0-b0",
+  "description": "Experimental Node.js module and CLI to use JSX as a templating language for static HTML",
+  "main": "index.js",
+  "bin": {
+    "ejsx": "./bin/ejsx.js"
+  },
+  "scripts": {
+    "start": "node ./bin/ejsx.js docs > docs/index.html",
+    "test": "node test"
+  },
+  "keywords": [
+    "jsx",
+    "static",
+    "html",
+    "template",
+    "templating"
+  ],
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "babel-preset-react": "^6.16.0",
+    "meow": "^3.7.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  }
+}

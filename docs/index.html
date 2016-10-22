@@ -1,1 +1,61 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>ejsx</title><meta name="description" content="Experimental Node.js module and CLI to use JSX as a templating language for static HTML"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="ejsx"/><meta name="twitter:description" content="Experimental Node.js module and CLI to use JSX as a templating language for static HTML"/><meta name="twitter:image" content=""/></head><div><header><h1>ejsx</h1><p>Experimental Node.js module and CLI to use JSX as a templating language for static HTML</p></header></div><footer><p><a href="https://github.com/jxnblk/ejsx">GitHub</a> <a href="https://npmjs.com/package/ejsx">npm</a> <a href="http://jxnblk.com">Made by Jxnblk</a></p></footer></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>&lt;Ejsx /&gt;</title><meta name="description" content="Pure JSX templates for rendering static HTML"/><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@jxnblk"/><meta name="twitter:title" content="&lt;Ejsx /&gt;"/><meta name="twitter:description" content="Pure JSX templates for rendering static HTML"/><meta name="twitter:image" content=""/><link rel="stylesheet" href="https://unpkg.com/type-system@1.0.0-beta.2/type-system.css"/><link rel="stylesheet" href="https://unpkg.com/open-color@1.4.0/open-color.css"/><style>.m0{margin:0px}.m1{margin:8px}.m2{margin:16px}.m3{margin:32px}.m4{margin:48px}.m5{margin:64px}.m6{margin:96px}.mt0{margin-top:0px}.mt1{margin-top:8px}.mt2{margin-top:16px}.mt3{margin-top:32px}.mt4{margin-top:48px}.mt5{margin-top:64px}.mt6{margin-top:96px}.mr0{margin-right:0px}.mr1{margin-right:8px}.mr2{margin-right:16px}.mr3{margin-right:32px}.mr4{margin-right:48px}.mr5{margin-right:64px}.mr6{margin-right:96px}.mb0{margin-bottom:0px}.mb1{margin-bottom:8px}.mb2{margin-bottom:16px}.mb3{margin-bottom:32px}.mb4{margin-bottom:48px}.mb5{margin-bottom:64px}.mb6{margin-bottom:96px}.ml0{margin-left:0px}.ml1{margin-left:8px}.ml2{margin-left:16px}.ml3{margin-left:32px}.ml4{margin-left:48px}.ml5{margin-left:64px}.ml6{margin-left:96px}.p0{padding:0px}.p1{padding:8px}.p2{padding:16px}.p3{padding:32px}.p4{padding:48px}.p5{padding:64px}.p6{padding:96px}.pt0{padding-top:0px}.pt1{padding-top:8px}.pt2{padding-top:16px}.pt3{padding-top:32px}.pt4{padding-top:48px}.pt5{padding-top:64px}.pt6{padding-top:96px}.pr0{padding-right:0px}.pr1{padding-right:8px}.pr2{padding-right:16px}.pr3{padding-right:32px}.pr4{padding-right:48px}.pr5{padding-right:64px}.pr6{padding-right:96px}.pb0{padding-bottom:0px}.pb1{padding-bottom:8px}.pb2{padding-bottom:16px}.pb3{padding-bottom:32px}.pb4{padding-bottom:48px}.pb5{padding-bottom:64px}.pb6{padding-bottom:96px}.pl0{padding-left:0px}.pl1{padding-left:8px}.pl2{padding-left:16px}.pl3{padding-left:32px}.pl4{padding-left:48px}.pl5{padding-left:64px}.pl6{padding-left:96px}
+
+:root {
+  --black: #0d1b26;
+  --blue: var(--oc-blue-5);
+}
+
+body {
+  margin: 0;
+  color: var(--black);
+}
+
+a { color: var(--blue) }
+
+.white { color: #fff }
+.black { color: var(--black) }
+.blue { color: var(--blue) }
+
+.bg-white { background-color: #fff }
+.bg-black { background-color: var(--black) }
+.bg-blue { background-color: var(--blue) }
+
+#carbonads {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.25;
+  text-align: left;
+  max-width: 320px;
+}
+#carbonads a,
+#carbonads a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+#carbonads span { display: block }
+#carbonads > span::before,
+#carbonads > span::after {
+  content: '';
+  display: table;
+}
+#carbonads > span::after {
+  clear: both;
+}
+.carbon-img {
+  float: left;
+  margin-right: .5em;
+}
+.carbon-img > img { display: block }
+.carbon-text { overflow: hidden }
+.carbon-poweredby {
+  float: left;
+  margin-top: .25em;
+  opacity: 0.5;
+}
+</style></head><div><header class="pl3 pr3 pt4 pb4 white bg-black"><h1 class="h1 xh0 blue">&lt;Ejsx /&gt;</h1><p class="h3 bold">Pure JSX templates for rendering static HTML</p><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;"><div class="mt2 mb2" style="display:inline-block;"><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Ejsx:%20Pure%20JSX%20templates%20for%20rendering%20static%20HTML" data-via="jxnblk">Tweet</a><script id="twitter-wjs" src="//platform.twitter.com/widgets.js" async=""></script></div><iframe class="mt2 mb2" src="//ghbtns.com/github-btn.html?user=jxnblk&amp;repo=ejsx&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="96px" height="20px"></iframe><div style="min-height:100px;"><script async="" src="//cdn.carbonads.com/carbon.js?zoneid=1696&amp;serve=CVYD42T&amp;placement=jxnblkcom" id="_carbonads_js"></script></div></div></header><div class="pl3 pr3" style="max-width:1024px;"><section id="install" class="pt4 pb4"><h2 class="">Install</h2><pre class="h5 p2" style="font-family:Menlo, monospace;background-color:#f6f6f6;">npm install -g ejsx</pre></section><section id="usage" class="pb4"><h2>Usage</h2><p>Create a Root.jsx template. This file should <b>not</b> include any wrapping JavaScript.</p><pre class="h5 p2" style="font-family:Menlo, monospace;background-color:#f6f6f6;">&lt;html&gt;
+  &lt;h1&gt;Hello&lt;/h1&gt;
+&lt;/html&gt;</pre><p>Run the ejsx command on the folder that contains the Root.jsx file, and write the output to an HTML file.</p><pre class="h5 p2" style="font-family:Menlo, monospace;background-color:#f6f6f6;">ejsx components &gt; index.html</pre><h3>Create Components</h3><p>To create reusable components, add files to the folder that begin with a capital letter and have the <code>.jsx</code> file extension. Components have access to the <code>props</code> passed in from their parent.</p><pre class="h5 p2" style="font-family:Menlo, monospace;background-color:#f6f6f6;">&lt;header&gt;
+  &lt;h1&gt;{props.title}&lt;/h1&gt;
+&lt;/header&gt;</pre><pre class="h5 p2" style="font-family:Menlo, monospace;background-color:#f6f6f6;">&lt;html&gt;
+  &lt;Header title=&#x27;Hello&#x27; /&gt;
+&lt;/html&gt;</pre></section></div></div><footer class="pl3 pr3 pt4 pb4"><p class="h5 bold"><a class="mr2" href="https://github.com/jxnblk/ejsx">GitHub</a><a class="mr2" href="https://npmjs.com/package/ejsx">npm</a><a href="http://jxnblk.com">Made by Jxnblk</a></p></footer><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-4603832-6", "auto");ga("send", "pageview");</script></html>

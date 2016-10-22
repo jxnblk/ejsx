@@ -1,5 +1,5 @@
 
-# ejsx
+# <Ejsx />
 
 WIP Experimental Node.js module and CLI to use JSX as a templating language for static HTML
 
@@ -12,7 +12,7 @@ npm install -g ejsx
 Create a folder that will contain JSX template files.
 
 Create a Root JSX template file.
-These “JSX template” files should *not* contain any normal JavaScript – just JSX code.
+These “JSX template” files should *not* contain any wrapping JavaScript – just JSX syntax.
 
 Root.jsx
 ```jsx
@@ -21,7 +21,7 @@ Root.jsx
 </html>
 ```
 
-Run the ejsx command and pipe the output to an HTML file.
+Run the ejsx command and write the output to an HTML file.
 
 ```sh
 ejsx components > index.html
@@ -48,4 +48,15 @@ Root.jsx
 
 See the [`docs`](docs) folder for a complete example.
 
+## Motivations
+
+React is a very powerful tool that can completely replace the need for traditional templating systems,
+but can be daunting to designers or others who aren't as familiar with JavaScript or Node.js.
+This is meant to be an extremely simple way to use JSX and basic components to render static HTML,
+without the need to use JavaScript.
+
+This might be good as a soft introduction to some of the concepts in React,
+especially related to code reuse, component encapsulation, and styling in React.
+
 MIT License
+

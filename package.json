@@ -7,7 +7,8 @@
     "ejsx": "./bin/ejsx.js"
   },
   "scripts": {
-    "start": "node ./bin/ejsx.js docs -p docs/data.json > docs/index.html",
+    "build": "node ./bin/ejsx.js docs -p docs/data.json > docs/index.html",
+    "start": "nodemon --exec 'npm run build' -e js,jsx",
     "help": "node ./bin/ejsx.js --help",
     "test": "node test"
   },
@@ -26,5 +27,8 @@
     "meow": "^3.7.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

@@ -2,4 +2,5 @@
   <Head {...props} />
   <App {...props} />
   <Footer />
+  <GA />
 </html>

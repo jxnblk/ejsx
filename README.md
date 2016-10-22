@@ -1,9 +1,11 @@
 
 # &lt;Ejsx /&gt;
 
-WIP Experimental Node.js module and CLI to use JSX as a templating language for static HTML
+Experimental Node.js module and CLI to use JSX as a templating language for static HTML
 
 ## Usage
+
+Be sure you have Node v6 installed https://nodejs.org
 
 ```sh
 npm install -g ejsx
@@ -12,9 +14,9 @@ npm install -g ejsx
 Create a folder that will contain JSX template files.
 
 Create a Root JSX template file.
-These “JSX template” files should *not* contain any wrapping JavaScript – just JSX syntax.
+These “JSX template” files should *not* contain any wrapping JavaScript – only JSX syntax.
 
-Root.jsx
+**Root.jsx**
 ```jsx
 <html>
   <h1>Hello</h1>
@@ -33,17 +35,33 @@ To create reusable components, add files to the folder that begin with a capital
 
 This is an example `Header` component. Components have access to the `props` passed in from their parent.
 
+**Header.jsx**
 ```jsx
 <header>
   <h1>{props.title}</h1>
 </header>
 ```
 
-Root.jsx
+**Root.jsx**
 ```jsx
 <html>
   <Header title='Hello component' />
 </html>
+```
+
+## Passing Props
+
+To pass props to the Root component, create a JSON file and pass the name of that file as an argument to the CLI.
+
+**data.json**
+```json
+{
+  "title": "Hello"
+}
+```
+
+```sh
+ejsx components --props data.json > index.html
 ```
 
 See the [`docs`](docs) folder for a complete example.

@@ -1,6 +1,6 @@
 {
   "name": "ejsx",
-  "version": "1.0.0-b0",
+  "version": "1.0.0-b1",
   "description": "Experimental Node.js module and CLI to use JSX as a templating language for static HTML",
   "main": "index.js",
   "bin": {

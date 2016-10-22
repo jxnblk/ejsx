@@ -1,5 +1,5 @@
 
-# <Ejsx />
+# &lt;Ejsx /&gt;
 
 WIP Experimental Node.js module and CLI to use JSX as a templating language for static HTML
 

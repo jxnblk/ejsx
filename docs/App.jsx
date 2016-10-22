@@ -1,4 +1,6 @@
 <div>
-  <Header title={props.title} />
-  <Title>Second title</Title>
+  <Header
+    title={props.title}
+    description={props.description}
+  />
 </div>

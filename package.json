@@ -7,7 +7,8 @@
     "ejsx": "./bin/ejsx.js"
   },
   "scripts": {
-    "start": "node ./bin/ejsx.js docs > docs/index.html",
+    "start": "node ./bin/ejsx.js docs -p docs/data.json > docs/index.html",
+    "help": "node ./bin/ejsx.js --help",
     "test": "node test"
   },
   "keywords": [
